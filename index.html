@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/var.css">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/switch.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="container">
+
+    <aside class="sidebar">
+
+      <div class="stepContainer">
+        <div class="stepNumber activeStep">1</div>
+        <div class="stepTitle">
+          <h3>Step 1</h3>
+          <span>Your info</span>
+        </div>
+      </div>
+
+      <div class="stepContainer">
+        <div class="stepNumber">2</div>
+        <div class="stepTitle">
+          <h3>Step 2</h3>
+          <span>Select plan</span>
+        </div>
+      </div>
+
+      <div class="stepContainer">
+        <div class="stepNumber">3</div>
+        <div class="stepTitle">
+          <h3>Step 3</h3>
+          <span>Add-ons</span>
+        </div>
+      </div>
+
+      <div class="stepContainer">
+        <div class="stepNumber">4</div>
+        <div class="stepTitle">
+          <h3>Step 4</h3>
+          <span>Summary</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <div class="formContent">
+      <div class="headerForm">
+      <!--Form step 1-->
+      <h1 class="title visible">Personal info</h1>
+      <p class="description visible">Please provide your name, email address, and phone number.</p>
+
+      <!--Form step 2-->
+      <h1 class="title">Select your plan</h1>
+      <p class="description">You have the option of monthly or yearly billing.</p>
+
+      <!--Form step 3-->
+      <h1 class="title">Pick add-ons</h1>
+      <p class="description">Add-ons help enhance your gaming experience.</p>
+
+      <!--Form step 4-->
+      <h1 class="title">Finishing up</h1>
+      <p class="description">Double-check everything looks OK before confirming.</p>
+    </div>
+
+      <div class="formStep1  activeForm">
+
+        <div class="inputTitle">
+          <label for="name">Name</label>
+          <p class="errorMessage displayErrorMessage">This field is required</p>
+        </div>
+        <input type="text" name="name" id="name" placeholder="e.g. Stephen King" class="input">
+
+        <div class="inputTitle">
+          <label for="name">Email Adress</label>
+          <p class="errorMessage">This field is required</p>
+        </div>
+        <input type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com" class="input">
+
+        <div class="inputTitle">
+          <label for="name">Phone Number</label>
+          <p class="errorMessage">This field is required</p>
+        </div>
+        <input type="text" name="name" id="phone" placeholder="e.g. +1 234 567 890" class="input">
+
+      </div>
+
+      <div class="formStep2">
+
+        <div class="plans">
+
+          <input type="radio" name="plan" id="arcade" value="arcade">
+          <label for="arcade">
+            <div class="checkPlan">
+              <img src="./src/images/icon-arcade.svg" alt="arcade icon" />
+              <div class="planDesc">
+                <h5 class="planTitle">Arcade</h5>
+                <p class="planPrice">$9/mo</p>
+                <p class="planGift">2 months free</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="plan" id="advanced" value="advanced">
+          <label for="advanced">
+            <div class="checkPlan">
+              <img src="./src/images/icon-advanced.svg" alt="advanced icon" />
+              <div class="planDesc">
+                <h5 class="planTitle">Advanced</h5>
+                <p class="planPrice">$12/mo</p>
+                <p class="planGift">2 months free</p>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="plan" id="pro" value="pro">
+          <label for="pro">
+            <div class="checkPlan">
+              <img src="./src/images/icon-pro.svg" alt="pro icon" />
+              <div class="planDesc">
+                <h5 class="planTitle">Pro</h5>
+                <p class="planPrice">$15/mo</p>
+                <p class="planGift">2 months free</p>
+              </div>
+            </div>
+          </label>
+
+        </div>
+
+        <div class="typeOfPay">
+          <label for="switchButton">
+            <p class="monthly">Monthly</p>
+          </label>
+          <input type="checkbox" id="switchButton" class="switchButton">
+          <label for="switchButton" class="switchContainer">
+            <div class="switch"></div>
+          </label>
+          <label for="switchButton">
+            <p class="yearly">Yearly</p>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="formStep3">
+
+        <label for="onlineService" class="checkboxContainer">
+          <div class="addOns">
+            <input type="checkbox" id="onlineService" class="checkboxInput" value="Online service"/>
+            <div class="checkboxStyled"></div>
+            <div class="typeAddOn">
+              <h5 class="addOnTitle">Online service</h5>
+              <span class="addOnDesc">Access to multiplayer games</span>
+            </div>
+          </div>
+          <div class="addOnPrice">+$1/mo</div>
+        </label>
+
+        <label for="largerStorage" class="checkboxContainer">
+          <div class="addOns">
+            <input type="checkbox" id="largerStorage" class="checkboxInput" value="Larger storage"/>
+            <div class="checkboxStyled"></div>
+            <div class="typeAddOn">
+              <h5 class="addOnTitle">Larger storage</h5>
+              <span class="addOnDesc">Extra 1TB of cloud save</span>
+            </div>
+          </div>
+          <div class="addOnPrice">+$2/mo</div>
+        </label>
+
+        <label for="customProfile" class="checkboxContainer">
+          <div class="addOns">
+            <input type="checkbox" id="customProfile" class="checkboxInput" value="Customizable profile"/>
+            <div class="checkboxStyled"></div>
+            <div class="typeAddOn">
+              <h5 class="addOnTitle">Customizable profile</h5>
+              <span class="addOnDesc">Custom theme on your profile</span>
+            </div>
+          </div>
+          <div class="addOnPrice">+$2/mo</div>
+        </label>
+
+      </div>
+
+      <div class="formStep4">
+        <p>Step 4</p>
+      </div>
+
+      <div class="footerForm">
+        <button class="previousStep">Go Back</button>
+        <button class="nextStep">Next Step</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="./src/js/script.js"></script>
+</body>
+
+</html>

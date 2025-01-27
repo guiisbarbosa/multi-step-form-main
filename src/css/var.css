@@ -1,0 +1,13 @@
+:root {
+  --primary-color: hsl(213, 96%, 18%);
+  --secondary-color: hsl(243, 100%, 62%);
+  --info-color: hsl(228, 100%, 84%);
+  --info-color-opacity: hsla(228, 100%, 84%, 0.1);
+  --accent-color: hsl(206, 94%, 87%);
+  --error-color: hsl(354, 84%, 57%);
+
+  --primary-neutral: hsl(231, 11%, 63%);
+  --secondary-neutral: hsl(229, 24%, 87%);
+  --bg-color: hsl(217, 100%, 97%);
+  --surface-color: hsl(231, 100%, 99%);
+}

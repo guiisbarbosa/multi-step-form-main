@@ -1,0 +1,376 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: "Ubuntu", serif;
+}
+
+.container {
+  width: 940px;
+  height: 600px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  gap: 100px;
+}
+
+
+.sidebar {
+  width: 274px;
+  height: 100%;
+  background: url('../images/bg-sidebar-desktop.svg') no-repeat;
+  border-radius: 12px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 40px 30px;
+  gap: 32px;
+}
+
+.sidebar .stepContainer {
+  display: flex;
+}
+
+.sidebar .stepContainer .stepNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sidebar .stepContainer .stepTitle {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .stepContainer .stepTitle h3 {
+  font-weight: 100;
+}
+
+.sidebar .stepContainer .stepTitle span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.sidebar .stepNumber.activeStep {
+  background-color: var(--accent-color);
+  color: var(--primary-color); 
+  border: none; 
+}
+
+
+
+.formContent {
+  width: 450px;
+  height: 568px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formContent .headerForm {
+  width: 100%;
+}
+
+
+.formContent .formStep1 {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formContent .title {
+  color: var(--primary-color);
+  margin-top: 45px;
+  align-self: flex-start;
+}
+
+.formContent .description {
+  color: var(--primary-neutral);
+  margin-top: 10px;
+  margin-bottom: 40px;
+  align-self: flex-start;
+}
+
+.formContent .formStep1 .inputTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.formContent .formStep1 .inputTitle label {
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.formContent .formStep1 .inputTitle .errorMessage {
+  color: var(--error-color);
+  font-weight: 700;
+  opacity: 0;
+}
+
+.formContent .formStep1 .input {
+  width: 450px; 
+  height: 50px;
+  outline: none;
+  border: 1px solid var(--secondary-neutral);
+  border-radius: 8px;
+  padding: 12px;
+  display: block;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-weight: 700;
+  width: 100%;
+}
+
+.formContent .formStep1 .input::placeholder {
+  font-weight: 500;
+}
+
+
+
+.formContent .formStep2 {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+}
+
+.formContent .formStep2 .plans {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formContent .formStep2 .plans input[type="radio"] {
+  display: none;
+}
+
+.formContent .formStep2 .plans input[type="radio"]:checked + label .checkPlan {
+  background-color: var(--info-color-opacity);
+}
+
+.formContent .formStep2 .plans .checkPlan {
+  width: 136px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+
+.formContent .formStep2 .plans .checkPlan img {
+  width: 40px;
+}
+
+.formContent .formStep2 .plans .checkPlan .planDesc .planTitle {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.formContent .formStep2 .plans .checkPlan .planDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 45px;
+}
+
+
+.formContent .formStep2 .plans .checkPlan .planDesc .planPrice {
+  font-size: 14px;
+  color: var(--primary-neutral);
+}
+
+.formContent .formStep2 .plans .checkPlan .planDesc .planGift {
+  font-size: 12px;
+  color: var(--primary-color);
+  font-weight: 500;
+  display: none;
+}
+
+.formContent .formStep2 .plans .checkPlan .planDesc .planGift.visible {
+  display: block;
+}
+
+.formContent .formStep2 .typeOfPay {
+  margin-top: 32px;
+  width: 100%;
+  height: 46px;
+  background-color: var(--info-color-opacity);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.formContent .formStep2 .typeOfPay p {
+  color: var(--primary-neutral);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.formContent .formStep2 .typeOfPay:has(.switchButton:not(:checked)) .monthly {
+  color: var(--primary-color);
+}
+
+.formContent .formStep2 .typeOfPay:has(.switchButton:checked) .yearly {
+  color: var(--primary-color);
+}
+
+
+
+.formContent .formStep3 {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formContent .formStep3 .checkboxContainer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--secondary-neutral);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.formContent .formStep3 .checkboxContainer .checkboxInput {
+  display: none; /* Esconde o checkbox padrão */
+}
+
+.formContent .formStep3 .checkboxContainer:has(.checkboxInput:checked) {
+  background-color: var(--info-color-opacity);
+  border: 1px solid var(--secondary-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.formContent .formStep3 .checkboxContainer .addOns {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.formContent .formStep3 .checkboxContainer .addOns .checkboxStyled {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.formContent .formStep3 .checkboxContainer .checkboxInput:checked + .checkboxStyled {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.formContent .formStep3 .checkboxContainer .checkboxInput:checked + .checkboxStyled::before {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+}
+
+.formContent .formStep3 .checkboxContainer .addOns .addOnTitle {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.formContent .formStep3 .checkboxContainer .addOns .addOnDesc {
+  font-size: 14px;
+  color: var(--primary-neutral);
+}
+
+.formContent .formStep3 .checkboxContainer .addOnPrice {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.formContent .formStep4 {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+
+.formContent .footerForm {
+  width: 100%;
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.formContent .footerForm .previousStep {
+  color: var(--primary-neutral);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0;
+  cursor: unset;
+}
+
+.formContent .footerForm .nextStep {
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.formContent .footerForm .nextStep:hover {
+  opacity: 0.9;
+}
+
+.formContent .footerForm .previousStep.visible,
+.formContent .formStep1 .inputTitle .errorMessage.visible {
+  opacity: 1;
+}
+
+.formContent .footerForm .previousStep:hover.visible {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.formContent .activeForm {
+  display: flex;
+}
+
+.formContent .title,
+.formContent .description {
+  display: none;
+}
+
+.formContent .title.visible,
+.formContent .description.visible {
+  display: block;
+}
