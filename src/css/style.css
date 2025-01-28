@@ -19,6 +19,7 @@ body {
 }
 
 
+
 .sidebar {
   width: 274px;
   height: 100%;
@@ -66,7 +67,6 @@ body {
   font-weight: 600;
 }
 
-
 .sidebar .stepNumber.activeStep {
   background-color: var(--accent-color);
   color: var(--primary-color); 
@@ -83,28 +83,31 @@ body {
   align-items: center;
 }
 
+
+
 .formContent .headerForm {
   width: 100%;
 }
+
+.formContent .headerForm .title {
+  color: var(--primary-color);
+  margin-top: 45px;
+  align-self: flex-start;
+}
+
+.formContent .headerForm .description {
+  color: var(--primary-neutral);
+  margin-top: 10px;
+  margin-bottom: 40px;
+  align-self: flex-start;
+}
+
 
 
 .formContent .formStep1 {
   display: none;
   flex-direction: column;
   width: 100%;
-}
-
-.formContent .title {
-  color: var(--primary-color);
-  margin-top: 45px;
-  align-self: flex-start;
-}
-
-.formContent .description {
-  color: var(--primary-neutral);
-  margin-top: 10px;
-  margin-bottom: 40px;
-  align-self: flex-start;
 }
 
 .formContent .formStep1 .inputTitle {
@@ -137,6 +140,14 @@ body {
   color: var(--primary-color);
   font-weight: 700;
   width: 100%;
+}
+
+.formContent .formStep1 .input:focus {
+  border: 1px solid var(--secondary-color);
+}
+
+.formContent .formStep1 .input.error {
+  border: 1px solid var(--error-color);
 }
 
 .formContent .formStep1 .input::placeholder {
@@ -191,7 +202,6 @@ body {
   gap: 6px;
   margin-top: 45px;
 }
-
 
 .formContent .formStep2 .plans .checkPlan .planDesc .planPrice {
   font-size: 14px;
@@ -265,13 +275,13 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.formContent .formStep3 .checkboxContainer .addOns {
+.formContent .formStep3 .checkboxContainer .addons {
   display: flex;
   gap: 24px;
   align-items: center;
 }
 
-.formContent .formStep3 .checkboxContainer .addOns .checkboxStyled {
+.formContent .formStep3 .checkboxContainer .addons .checkboxStyled {
   width: 20px;
   height: 20px;
   border: 2px solid var(--secondary-color);
@@ -293,27 +303,120 @@ body {
   font-size: 14px;
 }
 
-.formContent .formStep3 .checkboxContainer .addOns .addOnTitle {
+.formContent .formStep3 .checkboxContainer .addons .addonTitle {
   font-size: 16px;
   color: var(--primary-color);
   font-weight: 500;
 }
 
-.formContent .formStep3 .checkboxContainer .addOns .addOnDesc {
+.formContent .formStep3 .checkboxContainer .addons .addonDesc {
   font-size: 14px;
   color: var(--primary-neutral);
 }
 
-.formContent .formStep3 .checkboxContainer .addOnPrice {
+.formContent .formStep3 .checkboxContainer .addonPrice {
   font-size: 14px;
   font-weight: 500;
   color: var(--secondary-color);
 }
 
+
+
 .formContent .formStep4 {
   display: none;
   width: 100%;
   flex-direction: column;
+}
+
+.formContent .formStep4 .services {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 24px;
+  background-color: var(--info-color-opacity);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.formContent .formStep4 .services .selectedPlan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formContent .formStep4 .services .selectedService .selectedPlanTitle {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.formContent .formStep4 .services .selectedService .changePlan {
+  color: var(--primary-neutral);
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.formContent .formStep4 .services .selectedPlan .selectedPlanPrice {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.formContent .formStep4 .services hr {
+  border: 1px solid var(--secondary-neutral);
+}
+
+.formContent .formStep4 .services .selectedAddons .selectedAddon {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-neutral);
+  margin-top: 20px;
+}
+
+.formContent .formStep4 .services .selectedAddons .selectedAddon .selectedAddonPrice {
+  color: var(--primary-color);
+}
+
+.formContent .formStep4 .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 28px;
+  color: var(--primary-neutral);
+}
+
+.formContent .formStep4 .total .totalPrice {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+
+.formContent .formStep5 {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+}
+
+.formContent .formStep5 h1 {
+  color: var(--primary-color);
+}
+
+.formContent .formStep5 p {
+  color: var(--primary-neutral);
 }
 
 
@@ -349,6 +452,11 @@ body {
 
 .formContent .footerForm .nextStep:hover {
   opacity: 0.9;
+}
+
+.formContent .footerForm .nextStep.hidden,
+.formContent .footerForm .previousStep.hidden {
+display: none;
 }
 
 .formContent .footerForm .previousStep.visible,

@@ -74,11 +74,11 @@
       <p class="description">Double-check everything looks OK before confirming.</p>
     </div>
 
-      <div class="formStep1  activeForm">
+      <div class="formStep1 activeForm">
 
         <div class="inputTitle">
           <label for="name">Name</label>
-          <p class="errorMessage displayErrorMessage">This field is required</p>
+          <p class="errorMessage">This field is required</p>
         </div>
         <input type="text" name="name" id="name" placeholder="e.g. Stephen King" class="input">
 
@@ -156,51 +156,81 @@
       <div class="formStep3">
 
         <label for="onlineService" class="checkboxContainer">
-          <div class="addOns">
+          <div class="addons">
             <input type="checkbox" id="onlineService" class="checkboxInput" value="Online service"/>
             <div class="checkboxStyled"></div>
-            <div class="typeAddOn">
-              <h5 class="addOnTitle">Online service</h5>
-              <span class="addOnDesc">Access to multiplayer games</span>
+            <div class="typeAddon">
+              <h5 class="activeForm">Online service</h5>
+              <span class="addonDesc">Access to multiplayer games</span>
             </div>
           </div>
-          <div class="addOnPrice">+$1/mo</div>
+          <div class="addonPrice">+$1/mo</div>
         </label>
 
         <label for="largerStorage" class="checkboxContainer">
-          <div class="addOns">
+          <div class="addons">
             <input type="checkbox" id="largerStorage" class="checkboxInput" value="Larger storage"/>
             <div class="checkboxStyled"></div>
-            <div class="typeAddOn">
-              <h5 class="addOnTitle">Larger storage</h5>
-              <span class="addOnDesc">Extra 1TB of cloud save</span>
+            <div class="typeAddon">
+              <h5 class="AaddonTitle">Larger storage</h5>
+              <span class="addonDesc">Extra 1TB of cloud save</span>
             </div>
           </div>
-          <div class="addOnPrice">+$2/mo</div>
+          <div class="addonPrice">+$2/mo</div>
         </label>
 
         <label for="customProfile" class="checkboxContainer">
-          <div class="addOns">
+          <div class="addons">
             <input type="checkbox" id="customProfile" class="checkboxInput" value="Customizable profile"/>
             <div class="checkboxStyled"></div>
-            <div class="typeAddOn">
-              <h5 class="addOnTitle">Customizable profile</h5>
-              <span class="addOnDesc">Custom theme on your profile</span>
+            <div class="typeAddon">
+              <h5 class="addonTitle">Customizable profile</h5>
+              <span class="addonDesc">Custom theme on your profile</span>
             </div>
           </div>
-          <div class="addOnPrice">+$2/mo</div>
+          <div class="addonPrice">+$2/mo</div>
         </label>
 
       </div>
 
       <div class="formStep4">
-        <p>Step 4</p>
+        <div class="services">
+          <div class="selectedPlan">
+            <div class="selectedService">
+              <h5 class="selectedPlanTitle">Arcade (Monthly)</h5>
+              <button class="changePlan">Change</button>
+            </div>
+            <div class="selectedPlanPrice">$9/mo</div>
+          </div>
+
+          <hr />
+
+          <div class="selectedAddons">
+            <div class="selectedAddon">
+              <div class="selectedAddonTitle">No add-ons have been selected.</div>
+              <div class="selectedAddonPrice">$1/mo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="total"><p>Total (per month)</p> <p class="totalPrice">$10/mo</p></div>
+
+      </div>
+
+      <div class="formStep5">
+        <img src="./src/images/icon-thank-you.svg" alt="thank you illustration" />
+        <h1>Thank you!</h1>
+        <p>Thanks for confirming your subscription! We hope you have fun 
+          using our platform. If you ever need support, please feel free 
+          to email us at support@loremgaming.com.</p>
       </div>
 
       <div class="footerForm">
         <button class="previousStep">Go Back</button>
         <button class="nextStep">Next Step</button>
       </div>
+
+
 
     </div>
 
