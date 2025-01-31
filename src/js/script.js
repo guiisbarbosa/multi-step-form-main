@@ -20,6 +20,7 @@ let selectedAddons = [];
 const selectedPlanTitle = document.querySelector('.selectedPlanTitle');
 const selectedPlanPriceContainer = document.querySelector('.selectedPlanPrice');
 const totalPrice = document.querySelector('.totalPrice');
+const totalPayment = document.querySelector('.totalPayment');
 
 const nextStepBtn = document.querySelector('.nextStep')
 const previousStepButton = document.querySelector('.previousStep');
@@ -172,7 +173,7 @@ nextStepBtn.addEventListener('click', () => {
 
     if (selectedAddons.length > 0) {
       selectedAddons.map(addon => {
-        const formattedValue = `+$${addon.value}/${selectedTypePayment === 'yearly' ? 'yr' : 'mo'}`
+        const formattedValue = `+$${addon.value}/${selectedTypePayment === 'Yearly' ? 'yr' : 'mo'}`
 
         selectedAddonsContainer.innerHTML += `<div class="selectedAddon">
                                               <div class="selectedAddonTitle">${addon.name}</div>
@@ -187,7 +188,7 @@ nextStepBtn.addEventListener('click', () => {
     }
 
     selectedPlanTitle.innerHTML = selectedTypePlan
-    selectedPlanPriceContainer.innerHTML = `$${selectedPlanPrice}/${selectedTypePayment === 'yearly' ? 'yr' : 'mo'}`
+    selectedPlanPriceContainer.innerHTML = `$${selectedPlanPrice}/${selectedTypePayment === 'Yearly' ? 'yr' : 'mo'}`
 
     function calculateTotalAddonsValue(selectedAddons) {
       const totalAddonsValue = selectedAddons.reduce((total, addon) => {
@@ -198,7 +199,8 @@ nextStepBtn.addEventListener('click', () => {
 
     const totalAddons = calculateTotalAddonsValue(selectedAddons)
 
-      totalPrice.innerHTML = `$${selectedPlanPrice + totalAddons}/${selectedTypePayment === 'yearly' ? 'yr' : 'mo'}`
+      totalPayment.innerHTML = `Total (per ${selectedTypePayment === 'Yearly' ? 'year' : 'month'})`
+      totalPrice.innerHTML = `$${selectedPlanPrice + totalAddons}/${selectedTypePayment === 'Yearly' ? 'yr' : 'mo'}`
 
   if (isFormValid) {
     handleNextStep();
