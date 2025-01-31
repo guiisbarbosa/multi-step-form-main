@@ -100,7 +100,7 @@
 
         <div class="plans">
 
-          <input type="radio" name="plan" id="arcade" value="arcade">
+          <input type="radio" name="plan" id="arcade" value="Arcade" class="radioInput" checked>
           <label for="arcade">
             <div class="checkPlan">
               <img src="./src/images/icon-arcade.svg" alt="arcade icon" />
@@ -112,7 +112,7 @@
             </div>
           </label>
 
-          <input type="radio" name="plan" id="advanced" value="advanced">
+          <input type="radio" name="plan" id="advanced" value="Advanced" class="radioInput">
           <label for="advanced">
             <div class="checkPlan">
               <img src="./src/images/icon-advanced.svg" alt="advanced icon" />
@@ -124,7 +124,7 @@
             </div>
           </label>
 
-          <input type="radio" name="plan" id="pro" value="pro">
+          <input type="radio" name="plan" id="pro" value="Pro" class="radioInput">
           <label for="pro">
             <div class="checkPlan">
               <img src="./src/images/icon-pro.svg" alt="pro icon" />
@@ -157,7 +157,7 @@
 
         <label for="onlineService" class="checkboxContainer">
           <div class="addons">
-            <input type="checkbox" id="onlineService" class="checkboxInput" value="Online service"/>
+            <input type="checkbox" id="onlineService" class="checkboxInput" name="Online service" value="1"/>
             <div class="checkboxStyled"></div>
             <div class="typeAddon">
               <h5 class="activeForm">Online service</h5>
@@ -169,7 +169,7 @@
 
         <label for="largerStorage" class="checkboxContainer">
           <div class="addons">
-            <input type="checkbox" id="largerStorage" class="checkboxInput" value="Larger storage"/>
+            <input type="checkbox" id="largerStorage" class="checkboxInput" name="Larger storage" value="2"/>
             <div class="checkboxStyled"></div>
             <div class="typeAddon">
               <h5 class="AaddonTitle">Larger storage</h5>
@@ -181,7 +181,7 @@
 
         <label for="customProfile" class="checkboxContainer">
           <div class="addons">
-            <input type="checkbox" id="customProfile" class="checkboxInput" value="Customizable profile"/>
+            <input type="checkbox" id="customProfile" class="checkboxInput" name="Customizable profile" value="2"/>
             <div class="checkboxStyled"></div>
             <div class="typeAddon">
               <h5 class="addonTitle">Customizable profile</h5>
@@ -197,23 +197,23 @@
         <div class="services">
           <div class="selectedPlan">
             <div class="selectedService">
-              <h5 class="selectedPlanTitle">Arcade (Monthly)</h5>
+              <h5 class="selectedPlanTitle"></h5>
               <button class="changePlan">Change</button>
             </div>
-            <div class="selectedPlanPrice">$9/mo</div>
+            <div class="selectedPlanPrice"></div>
           </div>
 
           <hr />
 
           <div class="selectedAddons">
             <div class="selectedAddon">
-              <div class="selectedAddonTitle">No add-ons have been selected.</div>
-              <div class="selectedAddonPrice">$1/mo</div>
+              <div class="selectedAddonTitle">-</div>
+              <div class="selectedAddonPrice">-</div>
             </div>
           </div>
         </div>
 
-        <div class="total"><p>Total (per month)</p> <p class="totalPrice">$10/mo</p></div>
+        <div class="total"><p>Total (per month)</p> <p class="totalPrice"></p></div>
 
       </div>
 
